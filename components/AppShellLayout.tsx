@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { AppShell, Title } from '@mantine/core';
+import { AppShell, Title, Image } from '@mantine/core';
 
 export default function Layout({ 
     children,
@@ -15,11 +15,11 @@ export default function Layout({
       footer={{ height: 60 }}
     >
       <AppShell.Header>
-        <div className='flex flex-row justify-between mx-5'>
+        <div className='flex flex-row justify-between mx-5 my-2 w-2/3'>
           <Title>
             zeek
           </Title>
-        <div className='flex space-x-5'>
+        <div className='flex space-x-10'>
           <Title>
             about
           </Title>
@@ -37,6 +37,11 @@ export default function Layout({
       </AppShell.Main>
       <AppShell.Footer>
         <div className='flex flex-row justify-between mx-5'>
+          <Image 
+            src='/logo.jpg' 
+            h={50}
+            w={50}
+          />
           <Title>
             Footer
           </Title>

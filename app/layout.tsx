@@ -38,7 +38,8 @@ const theme = createTheme({
       "#ad3d00"
     ]
   },
-  fontFamily: 'Cutive',
+  fontFamily: 'Urbanist',
+ 
   headings: {
     fontWeight: '100',
     fontFamily: 'Urbanist',
