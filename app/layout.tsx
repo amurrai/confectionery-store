@@ -1,6 +1,8 @@
-import '@mantine/core/styles.css';
+import './globals.css'
+import '@mantine/core/styles.layer.css'
 
-import { ColorSchemeScript, MantineProvider, createTheme, AppShell, Group, Title } from '@mantine/core';
+import { ColorSchemeScript, MantineProvider, createTheme } from '@mantine/core';
+import Layout from "../components/AppShellLayout"
 
 export const metadata = {
   title: 'ZeeK',
@@ -38,7 +40,8 @@ const theme = createTheme({
   },
   fontFamily: 'Cutive',
   headings: {
-    fontFamily: 'Urbanist'
+    fontWeight: '100',
+    fontFamily: 'Urbanist',
   }
 })
 
@@ -47,7 +50,6 @@ export default function RootLayout({
 }: {
   children: any;
 }) {
-
   return (
     <html lang="en">
       <head>
@@ -57,7 +59,13 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Cutive&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider 
+          theme={theme}
+        >
+          <Layout>
+            {children}
+          </Layout>
+        </MantineProvider>
       </body>
     </html>
   );
