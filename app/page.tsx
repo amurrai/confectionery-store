@@ -1,34 +1,33 @@
 "use client"
-
-import { AppShell, Burger, Button, Group, Skeleton, Title } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { AppShell, Burger, Button, Group, Title, NavLink, Skeleton, Te, Titlext } from '@mantine/core';
 
 export default function Home() {
-  const [opened, { toggle }] = useDisclosure();
 
   return (
-    <AppShell
-      header={{ height: 60 }}
-      navbar={{ width: 300, breakpoint: 'sm', collapsed: { mobile: !opened } }}
-      padding="md"
-    >
-      <AppShell.Header>
-        <Group h="100%" px="md">
-          <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-          <Title>Zeek Confections</Title>
-        </Group>
+    <AppShell>
+      <AppShell.Header >
+        <div className='flex flex-row'>
+
+        <Title>
+          zeek
+        </Title>
+        <Title>
+          about
+        </Title>
+        <Title>
+          gallery
+        </Title>
+        <Title>
+          contact
+        </Title>
+        </div>
       </AppShell.Header>
-      <AppShell.Navbar p="md">
-        Navbar
-        {Array(15)
-          .fill(0)
-          .map((_, index) => (
-            <Skeleton key={index} h={28} mt="sm" animate={false} />
-          ))}
-      </AppShell.Navbar>
-      <AppShell.Main>Main
-        <Button variant='filled'>Test</Button>
-      </AppShell.Main>
+      {/* Main content */}
+      <AppShell.Footer>
+        <Title>
+          Footer
+        </Title>
+      </AppShell.Footer>
     </AppShell>
   );
 }

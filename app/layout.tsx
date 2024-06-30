@@ -1,6 +1,6 @@
 import '@mantine/core/styles.css';
 
-import { ColorSchemeScript, MantineProvider, createTheme } from '@mantine/core';
+import { ColorSchemeScript, MantineProvider, createTheme, AppShell, Group, Title } from '@mantine/core';
 
 export const metadata = {
   title: 'ZeeK',
@@ -45,18 +45,19 @@ const theme = createTheme({
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: any;
 }) {
+
   return (
     <html lang="en">
       <head>
         <ColorSchemeScript />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Cutive&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
       </head>
       <body>
-        <MantineProvider theme={theme} withGlobalStyles>{children}</MantineProvider>
+        <MantineProvider theme={theme}>{children}</MantineProvider>
       </body>
     </html>
   );
