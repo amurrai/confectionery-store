@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function ContactPage() {
   return (
-    <Container className='flex flex-col w-1/2 mt-20 min-w-max'>
+    <Container className='w-1/2 mt-20 min-w-max'>
       <Title>Contact Us</Title>
       <Fieldset variant="unstyled">
         <TextInput label="Name" />

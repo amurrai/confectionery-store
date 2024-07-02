@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
       <Container>
-        Main Container
+        <Container bg={'orange'} className='object-right-top h-50 w-1/3 border-2'>Main</Container>
       </Container>
   );
 }
