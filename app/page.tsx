@@ -1,12 +1,43 @@
 "use client"
-import { AppShell, Container, Burger, Button, Group, Title, NavLink, Skeleton } from '@mantine/core';
+import { Title, Button, Image } from '@mantine/core';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Navigation } from 'swiper/modules';
 
 
 export default function Home() {
 
   return (
-      <Container>
-        <Container bg={'orange'} className='object-right-top h-50 w-1/3 border-2'>Main</Container>
-      </Container>
+    <div>
+      <Title size="6rem">
+        Taste your Fandom
+      </Title>
+      <Swiper
+        slidesPerView={2.5}
+        spaceBetween={10}
+        navigation={true}
+        loop={true}
+        modules={[Navigation]}
+        className="mySwipe"
+      >
+        <SwiperSlide>
+          <Image src={"/photos/dv2.jpg"}/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={"/photos/bm3.jpg"}/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={"/photos/mf1.jpg"}/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={"/photos/st3.jpg"}/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={"/photos/sm1.jpg"}/>
+        </SwiperSlide>
+      </Swiper>
+    </div>
   );
 }
