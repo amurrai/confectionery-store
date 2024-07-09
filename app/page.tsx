@@ -4,14 +4,14 @@ import { Title, Button, Image } from '@mantine/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 
 
 export default function Home() {
 
   return (
     <div>
-      <Title size="6rem">
+      <Title size="5rem" className='my-20 mx-5' c='brown.9'>
         Taste your Fandom
       </Title>
       <Swiper
@@ -19,8 +19,12 @@ export default function Home() {
         spaceBetween={10}
         navigation={true}
         loop={true}
-        modules={[Navigation]}
-        className="mySwipe"
+        modules={[Autoplay, Navigation]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        className="mySwipe mt-10"
       >
         <SwiperSlide>
           <Image src={"/photos/dv2.jpg"}/>

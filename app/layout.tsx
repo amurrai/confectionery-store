@@ -10,7 +10,6 @@ export const metadata = {
 };
 
 const theme = createTheme({
-
   primaryColor: 'orange',
   colors: {
     orange: [
@@ -26,23 +25,23 @@ const theme = createTheme({
       "#b13900"
     ],
     brown: [
-      "#fff2eb",
-      "#fae1d4",
-      "#f9c1a3",
-      "#fa9e6c",
-      "#fa8140",
-      "#fa6d25",
-      "#fb6418",
-      "#df540e",
-      "#c74908",
-      "#ad3d00"
+      "#fbf2ef",
+      "#f1e2dd",
+      "#e5c2b5",
+      "#daa089",
+      "#d18264",
+      "#cc704c",
+      "#ca6640",
+      "#b35632",
+      "#9f4c2b",
+      "#8c3f22"
     ]
   },
   fontFamily: 'Urbanist',
- 
   headings: {
     fontWeight: '100',
     fontFamily: 'Urbanist',
+    
   }
 })
 
