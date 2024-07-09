@@ -41,7 +41,7 @@ export default function Layout({
         </div>
       </AppShell.Header>
       <Box bg={'orange'} className='absolute top-0 right-0 h-2/3 w-1/3 -z-50' />
-      <Title size="30rem" c="gray.1" className='absolute top-1/2 -z-50'>
+      <Title size="35rem" c="gray.0" className='absolute left-1/4 top-3/4 -z-50'>
         zeek
       </Title>
       

@@ -1,5 +1,5 @@
 "use client"
-import { Title, Button, Image } from '@mantine/core';
+import { Container, Title, Text, Image, Paper, Button } from '@mantine/core';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -16,7 +16,7 @@ export default function Home() {
       </Title>
       <Swiper
         slidesPerView={2.5}
-        spaceBetween={10}
+        spaceBetween={0}
         navigation={true}
         loop={true}
         modules={[Autoplay, Navigation]}
@@ -42,6 +42,31 @@ export default function Home() {
           <Image src={"/photos/sm1.jpg"}/>
         </SwiperSlide>
       </Swiper>
+        <div>
+          <Paper shadow="sm" p="xl" className='flex flex-col mt-24 items-center w-screen'>
+            <Title order={1}>
+              Unleash Your Imagination in Every Bite! 
+            </Title>
+            <Text size="lg" className='mt-3'>
+              Customize your dream confections and make every occasion extraordinary <br />
+              Contact us today and get a quote for your next event
+            </Text>
+            <Button size="md" className='mt-5 w-1/4 self-center' component="a" href="/contact">
+              Contact Us
+            </Button>
+          </Paper>
+        </div>
+      <div className='mt-20 mx-10'>
+        <Title size="7rem" c='brown.9'>
+          chocolates
+        </Title >
+        <Title size="7rem" c='brown.9'>
+          cakes
+        </Title>
+        <Title size="7rem" c='brown.9'>
+          cookies
+        </Title>
+      </div>
     </div>
   );
 }
