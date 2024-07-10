@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { AppShell, Title, Box, UnstyledButton } from '@mantine/core';
+import { AppShell, Title, Box, UnstyledButton, alpha } from '@mantine/core';
 
 export default function Layout({ 
     children,
@@ -14,7 +14,7 @@ export default function Layout({
       header={{ height: 60 }}
       footer={{ height: 60 }}
     >
-      <AppShell.Header className='w-2/3' c='brown.9'>
+      <AppShell.Header className='w-2/3' c='brown.9' bg={alpha('#ffffff', 0.5)}>
         <div className='flex flex-row justify-between mx-5 my-2'>
           <UnstyledButton component="a" href="/">
             <Title>
@@ -40,8 +40,8 @@ export default function Layout({
         </div>
         </div>
       </AppShell.Header>
-      <Box bg={'orange'} className='absolute top-0 right-0 h-2/3 w-1/3 -z-50' />
-      <Title size="35rem" c="gray.0" className='absolute left-1/4 top-3/4 -z-50'>
+      <Box bg={'orange'} className='fixed top-0 right-0 h-1/2 w-1/3 -z-40' />
+      <Title size="36rem" c={alpha('gray', 0.02)} className='fixed right-0 -bottom-20 -z-50'>
         zeek
       </Title>
       
