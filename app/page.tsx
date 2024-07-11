@@ -1,11 +1,11 @@
 "use client"
 import { Container, Title, Text, Image, Paper, Button, Accordion, Grid } from '@mantine/core';
+import styles from './styles.module.css';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation } from 'swiper/modules';
-
 
 export default function Home() {
 
@@ -57,7 +57,10 @@ export default function Home() {
           </Paper>
         </Container>
       <div className='mt-20 mx-10'>
-        <Accordion chevron={''}>
+        <Accordion 
+          chevron={''}
+          classNames={styles}
+          >
           <Accordion.Item value='chocolates'>
             <Accordion.Control>
               <Title size="7rem" c='brown.9'>

@@ -1,0 +1,8 @@
+.item {
+  border: 0;
+}
+.control {
+  &:hover {
+    background-color: transparent;
+  }
+}
